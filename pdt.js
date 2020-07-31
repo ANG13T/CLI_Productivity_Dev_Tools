@@ -1,6 +1,8 @@
 const inquirer = require('inquirer');
 const clc = require('cli-color');
 const CheckList = require('./checklist');
+const timer = require('./timer');
+const Timer = require('./timer');
 
 var askCommand = [
     {
@@ -31,7 +33,7 @@ function ask(){
         if(command === "NOTES") return;
         if(command === "HELP") return;
         if(command === "LINKS") return;
-        if(command === "TIMER") return;
+        if(command === "TIMER") setTimer();
     })   
 }
 
@@ -42,6 +44,12 @@ function checkList(){
 
 //TODO COMMANDS
 
+
+//TIMER
+function setTimer(){
+  let timer = new Timer();
+  timer.startTimer(5);
+}
 
 // Process 
 start();
