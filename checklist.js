@@ -56,9 +56,6 @@ class CheckList {
             if(command === "CREATE") {
                 this.create();
             }
-            if(command === "DELETE"){
-                this.delete();
-            } 
             if(command === "PRIORITY"){
                 this.priority();
             } 
@@ -70,7 +67,6 @@ class CheckList {
             } 
             if(command === "HELP") return;
             if(command === "QUIT" || command === "EXIT") return;
-        
         })
     }
     create() {
@@ -84,24 +80,12 @@ class CheckList {
             this.list.push(newItem);
             console.log("Created Item!");
         }else{
-            return "Item name invalid";
+            console.log("Item name invalid");
         }
         this.ask();
     })  
     }
 
-    delete() {
-        inquirer.prompt(deleteCommand).then(answers => {
-            if(answers.command != '' && parseInt(answers.command)){
-                let position = parseInt(answers.command) - 1;
-                this.list.splice(position, 1);
-                console.log("Deleted Item!");
-            }else{
-                return "Item index invalid";
-            }
-            this.ask();
-        })
-    }
     restart() {
         this.list = [];
         console.log("Checklist restarted!");
@@ -111,10 +95,10 @@ class CheckList {
     priority() {
         inquirer.prompt(priorityCommand).then(answers => {
             let position = parseInt(answers.command);
-            if(answers.command != '' &&  position && list[position]){
-                list[position].priority = true;
+            if(answers.command != '' &&  position && this.list[position]){
+                this.list[position].priority = true;
             }else{
-                return "Item index invalid";
+                console.log("Item index invalid");
             }
             this.ask();
         })
@@ -123,7 +107,11 @@ class CheckList {
     view(){
         let checkChoices = [];
         for(let i = 0; i < this.list.length; i++){
-            checkChoices.push(this.list[i].text);
+            if(this.list[i].priority){
+                checkChoices.push(this.list[i].text + " ⭐️");
+            }else{
+                checkChoices.push(this.list[i].text);
+            } 
         }
 
         let viewList = [
@@ -134,22 +122,17 @@ class CheckList {
                 choices: checkChoices
             }
         ]
-
-        console.log(checkChoices.length);
         inquirer.prompt(viewList).then((answers) => {
-            for(let i = 0; i < answers.length; i++){
-                let answer = answers[i];
-                console.log("answer", answer)
+            let result = answers.command;
+            for(let i = 0; i < result.length; i++){
+                let answer = result[i];
                 for(let j = 0; j < checkChoices.length; j++){
-                    console.log("choice", checkChoices[j])
                     if(answer == checkChoices[j]){
-                        this.list[j].complete = true;
+                        this.list.splice(j, 1);
                     }
                 }
             }
-
-            console.log(this.list);
-            // this.ask();
+            this.ask();
         })
     }
   };
