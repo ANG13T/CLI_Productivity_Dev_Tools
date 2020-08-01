@@ -1,5 +1,4 @@
 const inquirer = require('inquirer');
-var beep = require('beepbeep');
 
 var timerCommand = [
     {
@@ -34,7 +33,7 @@ class Timer {
     
             if (--timer < 0) {
                 console.log("TIMER IS UP");
-                beep(2);
+                console.log('\u0007');
                 clearInterval(refreshIntervalId);
             }
         }, 1000);

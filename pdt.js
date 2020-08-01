@@ -1,8 +1,8 @@
 const inquirer = require('inquirer');
 const clc = require('cli-color');
 const CheckList = require('./checklist');
-const timer = require('./timer');
 const Timer = require('./timer');
+const QuickLinks = require('./quicklinks');
 
 var askCommand = [
     {
@@ -32,7 +32,7 @@ function ask(){
         if(command === "POMODORO") return;
         if(command === "NOTES") return;
         if(command === "HELP") return;
-        if(command === "LINKS") return;
+        if(command === "LINKS" || command === "QUICKLINKS") setLinks();
         if(command === "TIMER") setTimer();
     })   
 }
@@ -49,6 +49,11 @@ function checkList(){
 function setTimer(){
   let timer = new Timer();
   timer.play();
+}
+
+// LINKS
+function setLinks(){
+  let links = new QuickLinks();
 }
 
 // Process 

@@ -1,8 +1,13 @@
 const inquirer = require('inquirer');
 const clc = require('cli-color');
+const terminalLink = require('terminal-link');
 
 //HELPER METHODS
+function toCommand(input){
+    return input.toString().toUpperCase().trim();
+}
 
+  
 var linksCommand = [
     {
       type: 'input',
@@ -19,19 +24,12 @@ var createCommand = [
 }
 ];
 
-var viewCommand = [
-{
-    type: 'input',
-    name: 'command',
-    message: 'Enter Quick Links Command 📟 :'
-}
-];
 
 var deleteCommand = [
     {
         type: 'input',
         name: 'command',
-        message: 'Enter Quick Links Command 📟 :'
+        message: 'Enter Item Index to Delete 📟 :'
     }
 ];
 
@@ -45,24 +43,22 @@ class QuickLinks {
 
     ask(){
         inquirer.prompt(linksCommand).then(answers => {
-            let result = answers.command;
-            if(result != ''){
-                if(command === "CREATE") {
+            let result = toCommand(answers.command);
+            
+            if(result != '' && result){
+                if(result === "CREATE") {
                     this.create();
-                    this.ask();
                 }
 
-                if(command === "DELETE") {
+                if(result === "DELETE") {
                     this.delete();
-                    this.ask();
                 }
 
-                if(command === "VIEW") {
+                if(result === "VIEW") {
                     this.view();
-                    this.ask();
                 }
 
-                if(command === "QUIT") return;
+                if(result === "QUIT") return;
             }else{
                 console.log("Invalid Command")
             }
@@ -70,15 +66,35 @@ class QuickLinks {
     }
 
     create(){
-
+        inquirer.prompt(createCommand).then(answers => {
+            let result = answers.command;
+            if(result != ''){
+                this.links.push(result);
+            }else{
+                console.log("Invalid link")
+            }
+            this.ask();
+        })
     }
 
     delete(){
-
+        inquirer.prompt(deleteCommand).then(answers => {
+            let result = parseInt(answers.command) - 1;
+            if(this.links[result]){
+                this.links.splice(result, 1);
+            }else{
+                console.log("Invalid Index")
+            }
+            this.ask();
+        })
     }
 
     view(){
-
+        for(let link of this.links){
+            const linkSRC = terminalLink(link, link);
+            console.log(linkSRC);
+        }
+        this.ask();
     }
 };
 
