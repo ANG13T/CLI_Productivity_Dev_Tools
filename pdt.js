@@ -4,6 +4,7 @@ const CheckList = require('./checklist');
 const Timer = require('./timer');
 const QuickLinks = require('./quicklinks');
 const Notes = require('./notes');
+const Todo = require('./todo');
 
 var askCommand = [
     {
@@ -28,7 +29,7 @@ function start(){
 function ask(){
     inquirer.prompt(askCommand).then(answers => {
         var command = toCommand(answers.command);
-        if(command === "TODO") return;
+        if(command === "TODO" || command === "TODOLIST" || command === "TODOS") setTodos();
         if(command === "CHECKLIST") checkList();
         if(command === "POMODORO") return;
         if(command === "NOTES" || command === "NOTE") setNotes();
@@ -60,6 +61,11 @@ function setLinks(){
 //NOTES
 function setNotes(){
   let notes = new Notes();
+}
+
+//TODO
+function setTodos(){
+  let todos = new Todo();
 }
 
 // Process 

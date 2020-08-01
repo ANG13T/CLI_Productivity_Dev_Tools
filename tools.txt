@@ -1,6 +1,5 @@
-- TODO
 - POMODORO
-- NOTES
 - HELP for all including main
+- README
 
 
