@@ -48,7 +48,7 @@ function checkList(){
 //TIMER
 function setTimer(){
   let timer = new Timer();
-  timer.startTimer(5);
+  timer.play();
 }
 
 // Process 
