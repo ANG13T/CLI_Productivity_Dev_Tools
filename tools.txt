@@ -1,9 +1,6 @@
 - TODO
-- CHECKLIST done
 - POMODORO
 - NOTES
-- HELP
-- SHORTCUT LINKS (QUICK LINKS)
-- TIMER
+- HELP for all including main
 
 

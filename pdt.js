@@ -3,6 +3,7 @@ const clc = require('cli-color');
 const CheckList = require('./checklist');
 const Timer = require('./timer');
 const QuickLinks = require('./quicklinks');
+const Notes = require('./notes');
 
 var askCommand = [
     {
@@ -30,7 +31,7 @@ function ask(){
         if(command === "TODO") return;
         if(command === "CHECKLIST") checkList();
         if(command === "POMODORO") return;
-        if(command === "NOTES") return;
+        if(command === "NOTES" || command === "NOTE") setNotes();
         if(command === "HELP") return;
         if(command === "LINKS" || command === "QUICKLINKS") setLinks();
         if(command === "TIMER") setTimer();
@@ -54,6 +55,11 @@ function setTimer(){
 // LINKS
 function setLinks(){
   let links = new QuickLinks();
+}
+
+//NOTES
+function setNotes(){
+  let notes = new Notes();
 }
 
 // Process 
