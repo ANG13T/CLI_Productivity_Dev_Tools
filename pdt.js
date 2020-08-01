@@ -5,6 +5,7 @@ const Timer = require('./timer');
 const QuickLinks = require('./quicklinks');
 const Notes = require('./notes');
 const Todo = require('./todo');
+const Pomodoro = require('./pomodoro');
 
 var askCommand = [
     {
@@ -31,7 +32,7 @@ function ask(){
         var command = toCommand(answers.command);
         if(command === "TODO" || command === "TODOLIST" || command === "TODOS") setTodos();
         if(command === "CHECKLIST") checkList();
-        if(command === "POMODORO") return;
+        if(command === "POMODORO") setPomodoro();
         if(command === "NOTES" || command === "NOTE") setNotes();
         if(command === "HELP") return;
         if(command === "LINKS" || command === "QUICKLINKS") setLinks();
@@ -67,6 +68,12 @@ function setNotes(){
 function setTodos(){
   let todos = new Todo();
 }
+
+//POMODORO
+function setPomodoro(){
+  let pomodoro = new Pomodoro();
+}
+
 
 // Process 
 start();
