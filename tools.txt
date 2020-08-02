@@ -1,4 +1,3 @@
-- POMODORO
 - HELP for all including main
 - README
 
