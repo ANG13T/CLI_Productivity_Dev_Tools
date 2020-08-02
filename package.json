@@ -1,17 +1,30 @@
 {
   "name": "productivity_dev_tools",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Simple, Easy to Use Productivity Tools for Developers",
+  "main": "pdt.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Angelina Tsuboi",
   "license": "ISC",
   "dependencies": {
     "beepbeep": "^1.3.0",
     "cli-color": "^2.0.0",
     "inquirer": "^7.3.3",
     "terminal-link": "^2.1.1"
-  }
+  },
+  "homepage": "https://github.com/angelina-tsuboi/CLI_Productivity_Dev_Tools#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/angelina-tsuboi/CLI_Productivity_Dev_Tools"
+  },
+  "engines": {
+    "node": ">=6"
+  },
+  "keywords": [
+    "productivity",
+    "developers",
+    "simple"
+  ]
 }
