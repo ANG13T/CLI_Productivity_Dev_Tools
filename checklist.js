@@ -52,7 +52,7 @@ class CheckList {
     console.log("Type in \"help\" if you need to know the commands");
         inquirer.prompt(checklistComand).then(answers => {
         let command = this.toCommand(answers.command);
-            if(command === "CREATE") {
+            if(command === "ADD") {
                 this.create();
             }
             if(command === "PRIORITY"){

@@ -34,7 +34,7 @@ class Todo {
         inquirer.prompt(todoCommand).then(answers => {
             var result = toCommand(answers.command);
             if(result != ''){
-                if(result === 'CREATE'){
+                if(result === 'ADD'){
                     this.create();
                 }
 
@@ -44,6 +44,10 @@ class Todo {
 
                 if(result === 'DELETE'){
                     this.delete();
+                }
+
+                if(result === 'RESTART'){
+                    this.todos = [];
                 }
 
                 if(result === 'QUIT') return;

@@ -45,7 +45,7 @@ class Notes {
     ask(){
         inquirer.prompt(notesCommand).then(answers => {
             var result = toCommand(answers.command);
-            if(result === "CREATE"){
+            if(result === "ADD"){
                 this.create();
             }
             if(result === "VIEW"){

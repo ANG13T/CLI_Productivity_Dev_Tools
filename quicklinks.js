@@ -45,7 +45,7 @@ class QuickLinks {
             let result = toCommand(answers.command);
             
             if(result != '' && result){
-                if(result === "CREATE") {
+                if(result === "ADD") {
                     this.create();
                 }
 

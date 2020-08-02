@@ -39,11 +39,11 @@ function ask(){
     inquirer.prompt(askCommand).then(answers => {
         var command = toCommand(answers.command);
         if(command === "TODO" || command === "TODOLIST" || command === "TODOS") setTodos();
-        if(command === "CHECKLIST") checkList();
-        if(command === "POMODORO") setPomodoro();
+        if(command === "CHECKLIST" || command === "CHECK") checkList();
+        if(command === "POMODORO" || command === "POM") setPomodoro();
         if(command === "NOTES" || command === "NOTE") setNotes();
         if(command === "HELP") return;
-        if(command === "LINKS" || command === "QUICKLINKS") setLinks();
+        if(command === "LINKS" || command === "QUICKLINKS" || command === "LINK") setLinks();
         if(command === "TIMER") setTimer();
         if(command === "QUIT" || command === "EXIT") return;
     })   
