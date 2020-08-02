@@ -28,7 +28,6 @@ class Todo {
 
     constructor(){
         this.todos = [];
-        this.ask();
     }
 
     ask(){

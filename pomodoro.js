@@ -15,7 +15,6 @@ class Pomodoro {
 
     constructor(){
         this.reps = 0;
-        this.ask();
     }
 
     ask(){

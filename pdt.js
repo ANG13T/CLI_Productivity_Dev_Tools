@@ -7,6 +7,14 @@ const Notes = require('./notes');
 const Todo = require('./todo');
 const Pomodoro = require('./pomodoro');
 
+//init classes
+let pomodoro = new Pomodoro();
+let checklist = new CheckList();
+let timer = new Timer();
+let notes = new Notes();
+let todos = new Todo();
+let links = new QuickLinks();
+
 var askCommand = [
     {
       type: 'input',
@@ -37,41 +45,39 @@ function ask(){
         if(command === "HELP") return;
         if(command === "LINKS" || command === "QUICKLINKS") setLinks();
         if(command === "TIMER") setTimer();
+        if(command === "QUIT" || command === "EXIT") return;
     })   
 }
 
 //CHECKLIST COMMANDS
 function checkList(){
-  let CHECKLIST = new CheckList();
+  checklist.ask();
 }
-
-//TODO COMMANDS
 
 
 //TIMER
 function setTimer(){
-  let timer = new Timer();
   timer.play();
 }
 
 // LINKS
 function setLinks(){
-  let links = new QuickLinks();
+  links.ask();
 }
 
 //NOTES
 function setNotes(){
-  let notes = new Notes();
+  notes.ask();
 }
 
 //TODO
 function setTodos(){
-  let todos = new Todo();
+  todos.ask();
 }
 
 //POMODORO
 function setPomodoro(){
-  let pomodoro = new Pomodoro();
+  pomodoro.ask();
 }
 
 

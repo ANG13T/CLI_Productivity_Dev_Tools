@@ -41,7 +41,6 @@ class Notes {
     //title and body
     constructor(){
         this.notes = [];
-        this.ask();
     }
     ask(){
         inquirer.prompt(notesCommand).then(answers => {

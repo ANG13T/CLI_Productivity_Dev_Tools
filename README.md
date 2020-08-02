@@ -1,16 +1,18 @@
-# Easie CLI Tools
-Get petty, time-wasting tasks easie using the command line
+# Productivity Dev Tools
+Increase your productivity using tools for the CLI!
 
 ## Installation
 ```bash
-npm i easie-cli-tools
+npm i prod_dev_tools
 ```
 
 ## Tools
-- Date: Lets you run commands regarding the date
-- String Manipulator: Lets you run specific commands on strings
-- JSON Creator: Lets you make JSON data
-- Todo List Maker: Lets you make a Todo List
+- Checklist: Create a checklist for all of your tasks
+- Todolist: Organize your project with a todo list
+- Quick Links: Get access to common links quickly 
+- Timer: Manage your time using a timer
+- Pomodoro: Increase your productivity with a Pomodoro Timer
+- Notes: Create notes for yourself in the console
 
 ### Date
 ```bash

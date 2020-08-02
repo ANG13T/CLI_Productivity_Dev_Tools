@@ -1,5 +1,5 @@
 {
-  "name": "productivity_dev_tools",
+  "name": "prod_dev_tools",
   "version": "1.0.0",
   "description": "Simple, Easy to Use Productivity Tools for Developers",
   "main": "pdt.js",

@@ -38,7 +38,6 @@ class QuickLinks {
     links = []
     constructor(){
         this.links = [];
-        this.ask();
     }
 
     ask(){

@@ -41,7 +41,6 @@ class CheckList {
 
     constructor(){
         this.list = [];
-        this.ask();
     }
 
     toCommand(input){
