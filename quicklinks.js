@@ -12,7 +12,7 @@ var linksCommand = [
     {
       type: 'input',
       name: 'command',
-      message: 'Enter Quick Links Command 📟 :'
+      message: 'Enter Quick Links Command 📟 : \n'
     }
   ];
 
@@ -20,7 +20,7 @@ var createCommand = [
 {
     type: 'input',
     name: 'command',
-    message: 'Enter Link 📟 :'
+    message: 'Enter Link 🔗 : \n'
 }
 ];
 
@@ -29,7 +29,7 @@ var deleteCommand = [
     {
         type: 'input',
         name: 'command',
-        message: 'Enter Item Index to Delete 📟 :'
+        message: 'Enter Item Index to Delete 🗑 : \n'
     }
 ];
 

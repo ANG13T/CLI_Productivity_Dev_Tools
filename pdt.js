@@ -19,7 +19,7 @@ var askCommand = [
     {
       type: 'input',
       name: 'command',
-      message: 'Enter Command 📟 :'
+      message: 'Enter Command 📟 : \n'
     }
   ];
 

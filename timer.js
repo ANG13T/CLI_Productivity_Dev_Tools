@@ -4,7 +4,7 @@ var timerCommand = [
     {
       type: 'input',
       name: 'command',
-      message: 'How Many Minuetes Would You Like the Timer To Run (60min MAX) 📟 :'
+      message: 'How Many Minuetes Would You Like the Timer To Run (60min MAX) ⏱ : \n'
     }
   ];
 

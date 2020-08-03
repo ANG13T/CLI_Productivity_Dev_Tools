@@ -8,7 +8,7 @@ var notesCommand = [
     {
       type: 'input',
       name: 'command',
-      message: 'Enter Notes Command 📟 :'
+      message: 'Enter Notes Command 📟 : \n'
     }
   ];
 
@@ -16,7 +16,7 @@ var notesCommand = [
     {
       type: 'input',
       name: 'command',
-      message: 'Enter Note Title 📟 :'
+      message: 'Enter Note Title 🖋 : \n'
     }
   ];
 
@@ -24,7 +24,7 @@ var notesCommand = [
     {
       type: 'editor',
       name: 'command',
-      message: 'Enter Note Text 📟 :'
+      message: 'Enter Note Text 🖋 : \n'
     }
   ];
 
@@ -32,7 +32,7 @@ var notesCommand = [
     {
       type: 'input',
       name: 'command',
-      message: 'Enter Index of Item you Want to Delete 📟 :'
+      message: 'Enter Index of Item you Want to Delete 🗑 : \n'
     }
   ];
 

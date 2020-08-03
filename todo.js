@@ -9,7 +9,7 @@ var todoCommand = [
     {
       type: 'input',
       name: 'command',
-      message: 'Enter Todo Command'
+      message: 'Enter Todo Command 📟: \n'
     }
 ];
 
@@ -17,7 +17,7 @@ var addCommand = [
     {
       type: 'input',
       name: 'command',
-      message: 'Enter task name'
+      message: 'Enter task name 📝: \n'
     }
 ];
 
@@ -86,7 +86,7 @@ class Todo {
             {
               type: 'input',
               name: 'command',
-              message: 'Enter index to delete'
+              message: 'Enter index to delete 🗑: \n'
             }
         ];
 

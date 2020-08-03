@@ -5,7 +5,7 @@ var pomodoroCommand = [
     {
       type: 'input',
       name: 'command',
-      message: 'Enter Pomodoro REPS: '
+      message: 'Enter Pomodoro REPS 🍅: \n'
     }
 ];
 
@@ -55,12 +55,16 @@ class Pomodoro {
                     this.ask();
                 }
                 if(message === "work"){
+                    console.log("WORK COMPLETE!!!")
+                    console.log("BREAK")
                     this.startTimer(5, "break", amount);
                 }
 
                 if(message === "break"){
                     amount--;
                     if(amount === 0){
+                        console.log("BREAK COMPLETE!!!")
+                        console.log("WORK")
                         console.log("POMODORO COMPLETE!!!");
                         return;
                     }else{

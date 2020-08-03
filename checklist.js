@@ -7,7 +7,7 @@ var checklistComand = [
     {
       type: 'input',
       name: 'command',
-      message: 'Enter CheckList Command 📟 :'
+      message: 'Enter CheckList Command 📟 : \n'
     }
   ];
 
@@ -15,7 +15,7 @@ var createCommand = [
     {
       type: 'input',
       name: 'command',
-      message: 'Enter item name 📟 :'
+      message: 'Enter item name 📝 : \n'
     }
   ];
 
@@ -23,7 +23,7 @@ var createCommand = [
     {
       type: 'input',
       name: 'command',
-      message: 'Enter index of the item you want to delete 📟 :'
+      message: 'Enter index of the item you want to delete 🗑 : \n'
     }
   ];
 
@@ -31,7 +31,7 @@ var createCommand = [
     {
       type: 'input',
       name: 'command',
-      message: 'Enter index of item you want to prioritize 📟 :'
+      message: 'Enter index of item you want to prioritize 📌 : \n'
     }
   ];
 
@@ -48,7 +48,7 @@ class CheckList {
     }
     
     ask(){
-    console.log("Welcome to Checklist!");
+    console.log("Welcome to Checklist! 📄🖋");
     console.log("Type in \"help\" if you need to know the commands");
         inquirer.prompt(checklistComand).then(answers => {
         let command = this.toCommand(answers.command);
