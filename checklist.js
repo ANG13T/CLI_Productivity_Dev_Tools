@@ -64,6 +64,10 @@ class CheckList {
             if(command === "VIEW"){
                 this.view();
             } 
+
+            if(command === "HELP"){
+                this.help();
+            } 
             if(command === "HELP") return;
             if(command === "QUIT" || command === "EXIT") return;
         })
@@ -101,6 +105,17 @@ class CheckList {
             }
             this.ask();
         })
+    }
+
+    help(){
+        console.log("COMMANDS");
+        console.log("add: Add an Item");
+        console.log("view: View and Edit Items");
+        console.log("priority: Prioritize an Item");
+        console.log("delete: Delete Items");
+        console.log("restart: Restart Checklist");
+        console.log("help: More Info");
+        console.log("quit: Quit Checklist");
     }
 
     view(){

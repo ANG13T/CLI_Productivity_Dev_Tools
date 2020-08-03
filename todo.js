@@ -50,6 +50,10 @@ class Todo {
                     this.todos = [];
                 }
 
+                if(result === 'HELP'){
+                    this.help();
+                }
+
                 if(result === 'QUIT') return;
             }else{
                 console.log("Invalid Command");
@@ -97,6 +101,16 @@ class Todo {
             
             this.ask();
         })
+    }
+
+    help(){
+        console.log("COMMANDS");
+        console.log("add: Add a Todo");
+        console.log("view: View Todos");
+        console.log("delete: Delete Todos");
+        console.log("restart: Restart Todolist");
+        console.log("help: More Info");
+        console.log("quit: Quit Todo");
     }
 
 }

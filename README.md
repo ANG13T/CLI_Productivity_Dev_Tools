@@ -24,7 +24,7 @@ todo
 ```bash
 link
 ```
-- Timer: Manage your time using a timer
+- Timer: Manage your time effectively using a timer
 ```bash
 timer
 ```
@@ -98,7 +98,7 @@ Delete Items
 delete
 ```
 
-Restart Checklist
+Restart Todolist
 ```bash
 restart
 ```

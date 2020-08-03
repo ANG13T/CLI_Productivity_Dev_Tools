@@ -1,4 +1,6 @@
 - HELP for all including main
-- README
-- Styling!!!
+- Styling!!! >
+    emojis
+    color
+    grammar
 

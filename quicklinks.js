@@ -57,6 +57,10 @@ class QuickLinks {
                     this.view();
                 }
 
+                if(result === "HELP") {
+                    this.help();
+                }
+
                 if(result === "QUIT") return;
             }else{
                 console.log("Invalid Command")
@@ -94,6 +98,15 @@ class QuickLinks {
             console.log(linkSRC);
         }
         this.ask();
+    }
+
+    help(){
+        console.log("COMMANDS");
+        console.log("add: Add a Link");
+        console.log("view: View Links");
+        console.log("delete: Delete Links");
+        console.log("help: More Info");
+        console.log("quit: Quit Links");
     }
 };
 

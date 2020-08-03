@@ -42,7 +42,7 @@ function ask(){
         if(command === "CHECKLIST" || command === "CHECK") checkList();
         if(command === "POMODORO" || command === "POM") setPomodoro();
         if(command === "NOTES" || command === "NOTE") setNotes();
-        if(command === "HELP") return;
+        if(command === "HELP") getHelp();
         if(command === "LINKS" || command === "QUICKLINKS" || command === "LINK") setLinks();
         if(command === "TIMER") setTimer();
         if(command === "QUIT" || command === "EXIT") return;
@@ -78,6 +78,18 @@ function setTodos(){
 //POMODORO
 function setPomodoro(){
   pomodoro.ask();
+}
+
+// HELP
+function getHelp(){
+  console.log("COMMANDS:")
+  console.log("check: Create a checklist for all of your tasks")
+  console.log("todo:  Organize your project with a todo list")
+  console.log("link: Get access to common links quickly ")
+  console.log("timer: Manage your time effectively using a timer ")
+  console.log("pom: Increase your productivity with a Pomodoro Timer ")
+  console.log("note: Create notes for yourself in the console")
+  console.log("exit: Quit the application")
 }
 
 

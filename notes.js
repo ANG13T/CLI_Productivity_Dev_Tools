@@ -54,6 +54,9 @@ class Notes {
             if(result === "DELETE"){
                 this.delete();
             }
+            if(result === "HELP"){
+                this.help();
+            }
             if(result === "QUIT") return;
         })
     }
@@ -126,6 +129,15 @@ class Notes {
 
             this.ask();
         })
+    }
+
+    help(){
+        console.log("COMMANDS");
+        console.log("add: Add a Note");
+        console.log("view: View Notes");
+        console.log("delete: Delete Notes");
+        console.log("help: More Info");
+        console.log("quit: Quit Notes");
     }
 }
 
